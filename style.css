@@ -2,9 +2,13 @@
 
 :root{
     font-size: 15px;
-    --font-color-white: white;
+    --basic-color: white;
+    --content-font-color-white: #ffffffc2;
     --font-title-card: 2.66rem "Big Shoulders Display", sans-serif;
-    
+    --font-content-card: 1rem/1.667rem "Lexend Deca", sans-serif;
+    --sedans-color: #E28625;
+    --suvs-color: #006971;
+    --luxury-color:  #004140;
 }
 
 *{
@@ -13,10 +17,10 @@
 
 .main{
     
-    font-family: "Lexend Deca";
-    color: var(--font-color-white);
+    
     display: flex;
     margin: 0;
+
     
 }
 
@@ -29,24 +33,81 @@
 
 
 .sedans{
-    background-color: #E28625;
+    background-color: var(--sedans-color);
     border-radius: 8px 0px 0px 8px;
 }   
 
 .suvs{
-    background-color: #006971;
+    background-color: var(--suvs-color);
 }
 
 .luxury{
-    background-color: #004140;
+    background-color: var(--luxury-color);
     border-radius: 0px 8px 8px 0px;
 }
 
 .sedans, .suvs, .luxury{
     width: 307px;
     height: 500px;
+    padding: 48px;
 }
 
-h2{
-    font: var(--font-title-card);
+
+.container img{
+    position: relative;
 }
+
+.container h2{
+    font: var(--font-title-card);
+    color: var(--basic-color);
+    
+}
+
+.container p{
+    font: var(--font-content-card);
+    color: var(--content-font-color-white);
+}
+
+button{
+    position: relative;
+    top: 68px;
+    border-width: 2px;
+    border-color: var(--basic-color);
+    border-style: none;
+    text-decoration: none;
+    padding: 11px 31px;
+    font: var(--font-content-card);
+    border-radius: 25px;
+}
+
+button a{
+    text-decoration: none;
+    
+
+}
+
+.sedans button a{
+    color: var(--sedans-color);
+
+}
+
+.suvs button a{
+    color: var(--suvs-color);
+}
+
+.luxury button a{
+    color: var(--luxury-color);
+}
+
+.sedans button:hover{
+    background-color: var(--sedans-color);
+    border-width: 2px;
+    border-color: var(--basic-color);
+    border-style: none;
+    text-decoration: none;
+    padding: 11px 31px;
+    border-radius: 25px;
+
+
+}
+
