@@ -31,8 +31,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Desktop
+![](images/3-column-preview-card-component-desktop.png)
 
+Mobile
+
+![](images/3-column-preview-card-mobile.png)
 
 ### Links
 
@@ -54,9 +58,12 @@ Users should be able to:
 - Style buttons
 - Improve of my DRY
 - Use of rem to maintain fonts scalable between each others
+- Media queries
+- stylizing buttons
 
 ### Continued development
-
+- Media queries
+- DRY
 
 
 ### Useful resources
@@ -66,10 +73,9 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Paul21777](https://www.frontendmentor.io/profile/Paul21777)
 
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 

@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    display: none;
+}
+
 :root{
     font-size: 15px;
     --basic-color: white;
@@ -9,28 +17,35 @@
     --sedans-color: #E28625;
     --suvs-color: #006971;
     --luxury-color:  #004140;
+    --background-color: #F2F2F2;
 }
 
-*{
-    box-sizing: border-box;
+@media screen and (max-width: 930px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }    
 }
 
-.main{
-    
-    
+.main{  
     display: flex;
     margin: 0;
-
-    
+    background-color: var(--background-color);  
 }
 
 .container{
     display: flex;
     margin: auto;
     margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
-    transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+    transform: translateY(  -50%); /* tiré de la moitié de sa propre hauteur */
 }
 
+@media screen and (max-width: 930px) {
+    .container{
+        margin-top: 0;
+        transform: none;
+    }  
+}
 
 .sedans{
     background-color: var(--sedans-color);
@@ -52,6 +67,19 @@
     padding: 48px;
 }
 
+@media screen and (max-width: 930px){
+    .sedans{
+        border-radius: 8px 8px 0 0;
+    }
+
+    .luxury{
+        border-radius: 0 0 8px 8px;
+    }
+
+    body{
+        padding: 20px;
+    }
+}
 
 .container img{
     position: relative;
@@ -68,46 +96,56 @@
     color: var(--content-font-color-white);
 }
 
+/* ---------------------------------------------------------------------------- BUTTON --------------------------------------------------------------------------*/
+
 button{
     position: relative;
     top: 68px;
     border-width: 2px;
     border-color: var(--basic-color);
-    border-style: none;
     text-decoration: none;
     padding: 11px 31px;
     font: var(--font-content-card);
     border-radius: 25px;
+    border-image: none;
+    border-style: solid;    
 }
 
-button a{
-    text-decoration: none;
-    
 
-}
-
-.sedans button a{
+.sedans a button{
     color: var(--sedans-color);
 
 }
 
-.suvs button a{
+.suvs a button{
     color: var(--suvs-color);
 }
 
-.luxury button a{
+.luxury a button{
     color: var(--luxury-color);
 }
 
-.sedans button:hover{
-    background-color: var(--sedans-color);
+.sedans a button:hover, .suvs a button:hover, .luxury a button:hover{
+    
     border-width: 2px;
     border-color: var(--basic-color);
-    border-style: none;
     text-decoration: none;
     padding: 11px 31px;
     border-radius: 25px;
-
-
+    border-style: solid;
+    cursor:pointer;
+    color: var(--basic-color);
 }
 
+.sedans a button:hover{
+    background-color: var(--sedans-color);
+    
+}
+
+.suvs a button:hover{
+    background-color: var(--suvs-color);
+}
+
+.luxury a button:hover{
+    background-color: var(--luxury-color);
+}
